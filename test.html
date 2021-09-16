@@ -1,0 +1,42 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"> 
+<html xmlns="https://www.w3.org/1999/xhtml"> 
+<head> 
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" /> 
+<title>無標題文檔</title> 
+<script type="text/javascript" language="javascript" src="../../jquery-1.7.1.min.js"> 
+</script> 
+
+</head> 
+
+<body> 
+<p style="background:#3F3">this is pi<br> 
+this is pi<br> 
+
+</p> 
+<input type="button" value="淡入/淡出" id="btn1"> 
+<input type="button" value="淡入/淡出 效果 透明度0.66" id="btn2"> 
+
+<script language="javascript"> 
+    $(document).ready(function(){ 
+        $("#btn1").toggle(function(){ 
+    
+                $("p").fadeOut("slow"); 
+                },function(){ 
+                    $("p").fadeIn("slow");    
+    
+            }); 
+            $("#btn2").toggle(function(){ 
+    
+                $("p").fadeTo("slow",0.66); 
+                },function(){ 
+                    $("p").fadeTo("slow",0.66);  
+            });  
+        }); 
+    
+    </script> 
+
+
+
+</body> 
+
+</html> 

@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="EN">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HP_KV</title>
+    <!-- <link rel="icon" href="https://ibb.co/9ZywS56" type="image/x-icon" />  -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+    
+</head>
+<style>
+    .container-fluid{
+        width: 100%;
+        height: auto;
+        display: flex;
+        justify-content: center;
+
+    }
+
+
+
+/* ---------- KV Navbar ---------- */
+    #HP_KV_navbar_wrap{
+        border: 1px solid grey;
+        
+    }
+    #HP_KV_navbar{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        position: relative;
+        flex-shrink: 0;
+        border: 1px solid grey;
+        
+    }
+
+    #HP_KV_navbar img{
+        width: 30px;
+        height: 30px;
+
+    }
+
+    #HP_KV_logo img{
+        width: 60px;
+        height: 60px;
+
+    }
+
+    #HP_KV_logos{
+        display: flex;
+        flex-direction: column;
+        margin: auto;
+        padding: auto;
+        justify-content: center;
+        align-items: center;
+    }
+    
+/* ---------- KV 標題 ---------- */
+    #HP_KV_title_wrap{
+        background-color: #FFB606;
+        position: relative;
+        display: inline-block;
+    }
+
+
+    .HP_KV_title{
+        position: absolute;
+        left: 30%;
+        top: 20%;
+        text-align: right;
+        z-index: 1;
+        overflow-wrap: normal;
+
+
+    }
+/* ---------- KV 輪播照片 ---------- */
+    #HP_KV_img_frame{
+        height: 400px;
+        overflow: hidden;
+        /* background-color: black; */
+        
+    }
+
+    #HP_KV_img_wrap .bgc img{
+        /* border: 3px red solid; */
+        object-fit: cover;
+    }
+
+/* ---------- KV 右邊slogn ---------- */
+    #HP_KV_slogn{
+        height: auto;
+        border: 1px solid grey;
+    }
+    #HP_KV_slogn p{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        writing-mode: vertical-lr;
+        font-size: 0.5rem;
+        margin: auto;
+        padding: auto;
+        border: 1px solid grey;
+    }
+    #HP_KV_slogn ul{
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        padding-left: 25px;
+        margin: 0;
+        border: 1px solid grey;
+    }
+
+    #HP_KV_slogn ul li {
+        cursor: pointer;
+    }
+
+
+</style>
+<body>
+<div class="container-fluid">
+    <div class="row">
+<!-- ---------- KV Navbar ---------- -->
+        <div id="HP_KV_navbar_wrap" class="col px-0" >
+            <div id="HP_KV_navbar">
+                <div id="HP_KV_logo"><img src="./img/icon/logo.png" alt=""></div>
+
+                <div id="HP_KV_logos">
+                    <div><img src="./img/icon/shopping-bag.png" alt=""></div>
+                    <div><h3>x</h3></div>
+                    <div><img src="./img/icon/newspaper.png" alt=""></div>
+                    <div><h3>x</h3></div>
+                    <div><img src="./img/icon/restaurant-menu.svg" alt=""></div>
+                </div>
+
+            </div>
+        </div>
+
+<!-- ---------- KV 標題 ---------- -->        
+        <div id="HP_KV_title_wrap" class="col-4 px-0" >
+            <div class="HP_KV_title">
+                <div><h1>良辰即食</h1></div>
+                <div><p>To eat is a necessity, <br>
+                    but to eat intelligently is an art. </p></div>
+            </div>
+        </div>
+
+<!-- ---------- KV 輪播照片 ---------- -->   
+        <div id="HP_KV_img_frame" class="col-6 px-0">
+            <div id="HP_KV_img_wrap">
+                <!-- <div class="HP_KV_img bgc"><img src="https://fakeimg.pl/800x400/"></div> -->
+                <div class="HP_KV_img"><img src="https://picsum.photos/id/1/800/400" alt=""></div>
+                <div class="HP_KV_img"><img src="https://picsum.photos/id/11/800/400" alt=""></div>
+                <div class="HP_KV_img"><img src="https://picsum.photos/id/21/800/400" alt=""></div>
+                <div class="HP_KV_img"><img src="https://picsum.photos/id/31/800/400" alt=""></div>
+            </div>
+        </div>
+
+
+<!-- ---------- KV 右邊slogn ---------- -->           
+        <div id="HP_KV_slogn" class="col px-0">
+            <div><p>People who love to eat.</p></div>
+
+            <ul class="slider-dots">
+                <li class="dot"></li>
+                <li class="dot"></li>
+                <li class="dot"></li>
+                <li class="dot"></li>
+
+        </div>
+    </div>
+</div>
+
+
+
+<script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+<script src="https://kit.fontawesome.com/f7e0275ee7.js" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+
+<script>
+$('#HP_KV_img_frame').click(function() {
+    $('#HP_KV_img_wrap').css('transform', 'translateY(-400px)')
+});
+
+let i = 0; 
+$('li.dot').click(function(){
+//透過index可以知道他是第幾個li
+    console.log('index:', $(this).index());
+    i = $(this).index();
+    $('#HP_KV_img_wrap').css('transform', `translateY(${i * -400}px)`)
+    
+    if (i = 1){
+        $('#HP_KV_title div h1').html(`好食商城`).fadeIn('slow');
+    } if (i = 2){
+        $('#HP_KV_title div h1').html(`好食專欄`).fadeIn('slow');
+    } else{
+
+    }
+
+
+
+
+
+});
+
+</script>
+
+
+</body>
+</html>
