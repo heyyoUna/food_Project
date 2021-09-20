@@ -15,24 +15,32 @@
         height: auto;
         display: flex;
         justify-content: center;
+        padding: 0;
 
     }
+    /* .row{
+        margin: -15px;
+    } */
 
 
 
 /* ---------- KV Navbar ---------- */
     #HP_KV_navbar_wrap{
         border: 1px solid grey;
+        width: 100%;
         
     }
     #HP_KV_navbar{
         width: 100%;
+        height: auto;
         display: flex;
         flex-direction: column;
+        justify-content: flex-end;
         align-items: center;
         position: relative;
         flex-shrink: 0;
         border: 1px solid grey;
+        margin: auto;
         
     }
 
@@ -64,17 +72,35 @@
         display: inline-block;
     }
 
+    .HP_KV_title_sub{
+        opacity: 0;
+    }
 
     .HP_KV_title{
-        position: absolute;
+        position: fixed;
         left: 30%;
         top: 20%;
         text-align: right;
         z-index: 1;
         overflow-wrap: normal;
+    }
 
+    .HP_KV_title_main{
+        opacity: 0;
+        animation-name: movingTitle;
+        animation-fill-mode: forwards;
+        animation-duration: 1s;
 
     }
+
+    @keyframes movingTitle{
+        0% {opacity: 0; top: 21%;}
+        50% {opacity: 0.3;}
+        75% {opacity:0.5;}
+        100% {opacity: 1}
+    }
+
+
 /* ---------- KV 輪播照片 ---------- */
     #HP_KV_img_frame{
         height: 400px;
@@ -120,7 +146,7 @@
 </style>
 <body>
 <div class="container-fluid">
-    <div class="row">
+    <!-- <div class="row"> -->
 <!-- ---------- KV Navbar ---------- -->
         <div id="HP_KV_navbar_wrap" class="col px-0" >
             <div id="HP_KV_navbar">
@@ -128,23 +154,45 @@
 
                 <div id="HP_KV_logos">
                     <div><img src="./img/icon/shopping-bag.png" alt=""></div>
+                    <span class="HP_KV_logo_words">好食商城</span>
                     <div><h3>x</h3></div>
                     <div><img src="./img/icon/newspaper.png" alt=""></div>
+                    <span class="HP_KV_logo_words">好食專欄</span>
                     <div><h3>x</h3></div>
                     <div><img src="./img/icon/restaurant-menu.svg" alt=""></div>
+                    <span class="HP_KV_logo_words">健康外送</span>
                 </div>
-
             </div>
         </div>
 
-<!-- ---------- KV 標題 ---------- -->        
+<!-- ---------- KV 標題 & 輪播照片 ---------- -->
         <div id="HP_KV_title_wrap" class="col-4 px-0" >
-            <div class="HP_KV_title">
+            <div class="HP_KV_title HP_KV_title_main">
                 <div><h1>良辰即食</h1></div>
-                <div><p>To eat is a necessity, <br>
-                    but to eat intelligently is an art. </p></div>
+                <div><p>良辰即食良辰即食 <br>
+                    良辰即食良辰即食良辰即食 </p></div>
             </div>
+
+            <div class="HP_KV_title HP_KV_title_sub">
+                <div><h1>好食商城</h1></div>
+                <div><p>好食商城好食商城 <br>
+                    好食商城好食商城好食商城 </p></div>
+            </div>
+
+            <div class="HP_KV_title HP_KV_title_sub">
+                <div><h1>好食專欄</h1></div>
+                <div><p>好食專欄好食專欄 <br>
+                    好食專欄好食專欄好食專欄</p></div>
+            </div>
+
+            <div class="HP_KV_title HP_KV_title_sub">
+                <div><h1>健康餐盒</h1></div>
+                <div><p>健康餐盒健康餐盒 <br>
+                    健康餐盒健康餐盒健康餐盒</p></div>
+            </div>
+
         </div>
+
 
 <!-- ---------- KV 輪播照片 ---------- -->   
         <div id="HP_KV_img_frame" class="col-6 px-0">
@@ -169,7 +217,7 @@
                 <li class="dot"></li>
 
         </div>
-    </div>
+    <!-- </div> -->
 </div>
 
 
