@@ -18,11 +18,6 @@
         padding: 0;
 
     }
-    /* .row{
-        margin: -15px;
-    } */
-
-
 
 /* ---------- KV Navbar ---------- */
     #HP_KV_navbar_wrap{
@@ -70,6 +65,17 @@
         background-color: #FFB606;
         position: relative;
         display: inline-block;
+        animation-name: titleBgc;
+        animation-fill-mode: forwards;
+        animation-duration: 1s;
+        animation-timing-function: linear;
+
+    }
+
+    @keyframes titleBgc{
+        0% {height: 0;}
+        50% {height: 200px;}
+        100% {height:400px;}
     }
 
     .HP_KV_title_sub{
@@ -89,36 +95,52 @@
         opacity: 0;
         animation-name: movingTitle;
         animation-fill-mode: forwards;
-        animation-duration: 1s;
+        animation-duration: 1.5s;
+        animation-delay: 0.5s;
 
     }
 
     @keyframes movingTitle{
-        0% {opacity: 0; top: 21%;}
+        0% {opacity: 0; top: 18%;}
         50% {opacity: 0.3;}
         75% {opacity:0.5;}
-        100% {opacity: 1}
+        100% {opacity: 1; top: 20%}
     }
 
 
 /* ---------- KV 輪播照片 ---------- */
     #HP_KV_img_frame{
         height: 400px;
-        overflow: hidden;
-        /* background-color: black; */
-        
+        overflow: hidden;     
     }
 
-    #HP_KV_img_wrap .bgc img{
-        /* border: 3px red solid; */
+    .HP_KV_img {
+        width: 100%;
         object-fit: cover;
     }
+
+    #HP_KV_img_wrap .bgc{
+        width: 100%;
+        height: 400px;
+        background-color: #f2f2f2;
+        animation-name: KV_img_bgc;
+        animation-fill-mode: forwards;
+        animation-duration: 1s;
+        animation-timing-function: linear;
+    }
+
+    @keyframes KV_img_bgc {
+        from {height: 400px;}
+        to {height: 0px; opacity: 0}   
+    }
+
 
 /* ---------- KV 右邊slogn ---------- */
     #HP_KV_slogn{
         height: auto;
         border: 1px solid grey;
     }
+
     #HP_KV_slogn p{
         display: flex;
         justify-content: center;
@@ -197,11 +219,11 @@
 <!-- ---------- KV 輪播照片 ---------- -->   
         <div id="HP_KV_img_frame" class="col-6 px-0">
             <div id="HP_KV_img_wrap">
-                <!-- <div class="HP_KV_img bgc"><img src="https://fakeimg.pl/800x400/"></div> -->
-                <div class="HP_KV_img"><img src="https://picsum.photos/id/1/800/400" alt=""></div>
-                <div class="HP_KV_img"><img src="https://picsum.photos/id/11/800/400" alt=""></div>
-                <div class="HP_KV_img"><img src="https://picsum.photos/id/21/800/400" alt=""></div>
-                <div class="HP_KV_img"><img src="https://picsum.photos/id/31/800/400" alt=""></div>
+                <div class="HP_KV_img bgc"></div>
+                <div><img class="HP_KV_img first" src="./img/HP_KV_img_main.jpg" alt=""></div>
+                <div><img class="HP_KV_img" src="./img/HP_KV_img_shop.jpg" alt=""></div>
+                <div><img class="HP_KV_img" src="./img/HP_KV_img_col.jpg" alt=""></div>
+                <div><img class="HP_KV_img" src="./img/HP_KV_img_res.jpg" alt=""></div>
             </div>
         </div>
 
