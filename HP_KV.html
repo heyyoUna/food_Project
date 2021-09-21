@@ -10,7 +10,7 @@
     
 </head>
 <style>
-    .container-fluid{
+    .HP_KV_container{
         width: 100%;
         height: auto;
         display: flex;
@@ -119,7 +119,7 @@
         object-fit: cover;
     }
 
-    #HP_KV_img_wrap .bgc{
+    #HP_KV_img_frame .bgc{
         width: 100%;
         height: 400px;
         background-color: #f2f2f2;
@@ -133,6 +133,21 @@
         from {height: 400px;}
         to {height: 0px; opacity: 0}   
     }
+
+    /* #HP_KV_img_wrap .first{
+        animation-name: kv_first_img;
+        animation-fill-mode: forwards;
+        animation-duration: 1.5s;
+        animation-timing-function: linear;
+        animation-delay: -0.5s;
+    }
+
+    @keyframes kv_first_img {
+        from {width: 110%;}
+        to {width: 100%;}   
+    } */
+
+
 
 
 /* ---------- KV 右邊slogn ---------- */
@@ -160,14 +175,28 @@
         border: 1px solid grey;
     }
 
-    #HP_KV_slogn ul li {
-        cursor: pointer;
+    #HP_KV_slogn .slider-dots {
+        /* 去除li的空間 */
+        margin: 0; padding: 0; 
+        list-style: none;
     }
+
+    #HP_KV_slogn .slider-dots li{
+        width: 10px;
+        height: 10px;
+        background-color: black;
+        border-radius: 50%;
+        margin: 3px auto;
+        padding: 1px;
+    }
+
+
+
 
 
 </style>
 <body>
-<div class="container-fluid">
+<div class="container-fluid HP_KV_container">
     <!-- <div class="row"> -->
 <!-- ---------- KV Navbar ---------- -->
         <div id="HP_KV_navbar_wrap" class="col px-0" >
@@ -218,8 +247,8 @@
 
 <!-- ---------- KV 輪播照片 ---------- -->   
         <div id="HP_KV_img_frame" class="col-6 px-0">
+            <div class="HP_KV_img bgc"></div>
             <div id="HP_KV_img_wrap">
-                <div class="HP_KV_img bgc"></div>
                 <div><img class="HP_KV_img first" src="./img/HP_KV_img_main.jpg" alt=""></div>
                 <div><img class="HP_KV_img" src="./img/HP_KV_img_shop.jpg" alt=""></div>
                 <div><img class="HP_KV_img" src="./img/HP_KV_img_col.jpg" alt=""></div>
@@ -250,30 +279,22 @@
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
 
 <script>
-$('#HP_KV_img_frame').click(function() {
-    $('#HP_KV_img_wrap').css('transform', 'translateY(-400px)')
-});
 
-let i = 0; 
-$('li.dot').click(function(){
-//透過index可以知道他是第幾個li
-    console.log('index:', $(this).index());
-    i = $(this).index();
-    $('#HP_KV_img_wrap').css('transform', `translateY(${i * -400}px)`)
+//點擊按鈕，切換照片
+    let i = 0; 
+    $('li.dot').mouseenter(function(){
+    //透過index，找出他是第幾個li
+        console.log('index:', $(this).index());
+        i = $(this).index();
     
-    if (i = 1){
-        $('#HP_KV_title div h1').html(`好食商城`).fadeIn('slow');
-    } if (i = 2){
-        $('#HP_KV_title div h1').html(`好食專欄`).fadeIn('slow');
-    } else{
-
-    }
-
+    //火車上移，移動到指定照片
+        $('#HP_KV_img_wrap').css('transform', `translateY(${i * -400}px)`);
+    
+    //選定的li變色
+        $(this).css('background-color', '#FFB606').siblings().css('background-color', 'black');
+    });
 
 
-
-
-});
 
 </script>
 
