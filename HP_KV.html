@@ -62,6 +62,7 @@
         padding: auto;
         justify-content: center;
         align-items: center;
+        height: 100vh;
     }
     
 /* ---------- KV 標題 ---------- */
@@ -79,7 +80,7 @@
     @keyframes titleBgc{
         0% {height: 0;}
         50% {height: 200px;}
-        100% {height:400px;}
+        100% {height:100vh;}
     }
 
     .HP_KV_title_sub{
@@ -116,7 +117,7 @@
 
 /* ---------- KV 輪播照片 ---------- */
     #HP_KV_img_frame{
-        height: 400px;
+        height: 100vh;
         overflow: hidden;     
     }
 
@@ -127,7 +128,7 @@
 
     #HP_KV_img_frame .bgc{
         width: 100%;
-        height: 400px;
+        height: 100vh;
         background-color: #f2f2f2;
         animation-name: KV_img_bgc;
         animation-fill-mode: forwards;
@@ -136,7 +137,7 @@
     }
 
     @keyframes KV_img_bgc {
-        from {height: 400px;}
+        from {height: 100vh;}
         to {height: 0px; opacity: 0}   
     }
 
@@ -222,7 +223,7 @@
             </div>
         </div>
 
-<!-- ---------- KV 標題 & 輪播照片 ---------- -->
+<!-- ---------- KV 標題  ---------- -->
         <div id="HP_KV_title_wrap" class="col-4 px-0" >
             <div class="HP_KV_title HP_KV_title_main">
                 <div><h1>良辰即食</h1></div>
@@ -294,7 +295,7 @@
         i = $(this).index();
     
     //火車上移，移動到指定照片
-        $('#HP_KV_img_wrap').css('transform', `translateY(${i * -400}px)`);
+        $('#HP_KV_img_wrap').css('transform', `translateY(${i * -1000}vh)`);
     
     //選定的li變色
         $(this).css('background-color', '#FFB606').siblings().css('background-color', 'black');

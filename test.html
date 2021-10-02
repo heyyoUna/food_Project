@@ -4,67 +4,53 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Test</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
 </head>
+
 <style>
+    /* #collapseOne, .panel-heading{
+        border: 1px solid grey;
+    } */
 
-    .childDIV{
-        border-top: 1px solid grey;
+    .loupeWrap{
+        display: inline-block;
     }
+
+    
 </style>
+
 <body>
-<div class="wrap">
-   <div class="childDIV">
-       <p>P文字</p>
-       <span>span words</span>
-   </div>
-   <div class="childDIV">
-       <p>P文字</p>
-       <span>span words</span>
-   </div>
-   <div class="childDIV">
-       <p>P文字</p>
-       <span>span words</span>
-   </div>
-   <div class="childDIV">
-       <p>P文字</p>
-       <span>span words</span>
-   </div>
-</div>
+    <div class="container">
+        <!-- <div class="row"> -->
+            <div class="panel-group" id="accordion">
+                <div class="panel panel-default">
+                    
+                    <div class="panel-heading loupeWrap">
+                            <a data-toggle="collapse" data-parent="#accordion" 
+                               href="#collapseOne">
+                               <img src="./img//icon/loupe.png" alt="" style="width: 22px;">
+                            </a>
+                    </div>
+                    
+                    <div id="collapseOne" class="panel-collapse collapse in">
+                        <div class="panel-body">
+                            <form class="d-flex">
+                                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                                <button class="btn btn-outline-success" type="submit">Search</button>
+                              </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
 
-        <ul class="slider-dots">
-            <li class="dot"></li>
-            <li class="dot"></li>
-            <li class="dot"></li>
-            <li class="dot"></li>
     </div>
-
 
 <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
 <script src="https://kit.fontawesome.com/f7e0275ee7.js" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
 
-
-
-<script>
-    // $('.wrap div:nth-child(1)').css('color', 'grey').siblings().css('color', 'red');
-    
-    let i = 0; 
-    $('li.dot').hover(function(){
-        i = $(this).index();
-
-        $(this).css('background-color', '#FFB606').siblings().css('background-color', 'black');
-
-        $(`.wrap div:nth-child(${i+1})`).css('color', 'grey').siblings().css('color', 'red');
-    });
-
-
-    
-    
-    
-</script>
-    
 </body>
 </html>
