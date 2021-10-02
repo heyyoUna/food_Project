@@ -11,31 +11,53 @@
 <style>
     nav{
         width: 100%;
-        display:flex;
-        justify-content:center;
-
     }
-
     .listN{
         list-style: none;
     }
+/* ---------- navbar logo ---------- */
+    .foodLogo img {
+        width: 60px;
+    }
 
+/* ---------- navbar 選項們 ---------- */
     .fa-caret-down{
         color: #8FC065
     }
 
-    .navLogos{
-        /* border: 1px solid black; */
-        width: 100px;
-        display: flex;
-        justify-content: space-between;
-    }
     a{
         color: black;
     }
 
+    .foodNav{
+        width: 80%;
+        text-align: center;
+        /* padding: auto; */
+        margin: auto;
+        display: flex;
+        justify-content: space-between;
+        
+    }
+/* ---------- navbar 右邊icons ---------- */
+    .navIcons{
+        /* border: 1px solid black; */
+        width: 120px;
+        display: flex;
+        justify-content: space-between;
+    }
+
+
     ul{
-        border: 1px solid black;
+        /* border: 1px solid black; */
+    }
+
+    .loupeWrap{
+        display: inline-block;
+    }
+
+    .searchForm{
+        width: 500px;
+        text-align: left;
     }
 
 
@@ -43,61 +65,78 @@
 
 <body>
 
-    <nav class="navbar navbar-expand-lg bg-light ">
-        <div><a class="navbar-brand" href="#"><img src="./img/icon/logo.png" alt="" style="width: 60px;"></a></div>
+<div class="container">
+        <nav class="navbar navbar-expand-lg bg-light">
+            
+<!------------ logo ------------>
+                    <div class="foodLogo"><a class="navbar-brand" href="#"><img src="./img/icon/logo.png" alt="良辰即食"></a></div>
+            
+<!------------ navbar 選項們  ------------>
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="navbar-nav mr-auto foodNav">
+            
+     <!------------  好食商城 ---------- -->
+                        <li class="nav-item dropdown">
+                          <a class="nav-link" href="#" id="navbarDropdown" role="button" data-toggle="dropdown">
+                            好食商城 
+                            <i class="fas fa-caret-down"></i>
+                          </a>
+                          <div class="dropdown-menu">
+                            <a class="dropdown-item" href="#">快速上桌</a>
+                            <a class="dropdown-item" href="#">健身專區</a>
+                            <a class="dropdown-item" href="#">嚴選食材</a>
+                            <a class="dropdown-item" href="#">查看全部</a>
+                          </div>
+                        </li>
+    <!------------  好食專欄 ---------- -->
+                        <li class="nav-item dropdown">
+                            <a class="nav-link" href="#" id="navbarDropdown" role="button" data-toggle="dropdown">
+                            好食專欄  <i class="fas fa-caret-down"></i>
+                            </a>
+                            <div class="dropdown-menu">
+                            <a class="dropdown-item" href="#">快速上桌</a>
+                            <a class="dropdown-item" href="#">健身專區</a>
+                            <a class="dropdown-item" href="#">嚴選食材</a>
+                            <a class="dropdown-item" href="#">查看全部</a>
+                            </div>
+                        </li>
+            
+                        <li class="nav-item active">
+                            <a class="nav-link" href="#">健康餐盒外送 </a>
+                        </li>
+            
+                        <li class="nav-item active">
+                            <a class="nav-link" href="#">餐食輪盤 </a>
+                        </li>
+            
+                        <li class="nav-item active">
+                            <a class="nav-link" href="#">成為合作店家 </a>
+                        </li>
+            
+                    </ul>
+                    </div>
+            
+                    <ul class="navbar-nav navIcons">
+                        <li class="nav-item dropdown listN">
+                            <a href="#" id="navbarDropdown" role="button" data-toggle="dropdown">
+                                <img src="./img//icon/loupe.png" alt="" style="width: 22px;">
+                            </a>
+                            <div class="dropdown-menu">
+                                <form class="dropdown-item searchForm">
+                                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                                    <button class="btn btn-outline-success" type="submit">Search</button>
+                                  </form>
+                            </div>
+                          </li>
+            
+                        <li class="listN"><a href=""><img src="./img//icon/user.png" alt="" style="width: 22px;"></a></li>
+                        <li class="listN"><a href=""><img src="./img//icon/shopping-cart.png" alt="" style="width: 25px;"></a></li>
+                    </ul>
+            
+                  </nav>
+    </div>
 
-<!-- 被折疊區域 nav -->
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav mr-auto">
-
-<!-- 好食商城 -->
-            <li class="nav-item dropdown">
-              <a class="nav-link" href="#" id="navbarDropdown" role="button" data-toggle="dropdown">
-                好食商城 
-                <i class="fas fa-caret-down"></i>
-              </a>
-              <div class="dropdown-menu">
-                <a class="dropdown-item" href="#">快速上桌</a>
-                <a class="dropdown-item" href="#">健身專區</a>
-                <a class="dropdown-item" href="#">嚴選食材</a>
-                <a class="dropdown-item" href="#">查看全部</a>
-              </div>
-            </li>
-<!-- 好食專欄 -->
-            <li class="nav-item dropdown">
-                <a class="nav-link" href="#" id="navbarDropdown" role="button" data-toggle="dropdown">
-                好食專欄  <i class="fas fa-caret-down"></i>
-                </a>
-                <div class="dropdown-menu">
-                <a class="dropdown-item" href="#">快速上桌</a>
-                <a class="dropdown-item" href="#">健身專區</a>
-                <a class="dropdown-item" href="#">嚴選食材</a>
-                <a class="dropdown-item" href="#">查看全部</a>
-                </div>
-            </li>
-
-            <li class="nav-item active">
-                <a class="nav-link" href="#">健康餐盒外送 </a>
-            </li>
-
-            <li class="nav-item active">
-                <a class="nav-link" href="#">餐食輪盤 </a>
-            </li>
-
-            <li class="nav-item active">
-                <a class="nav-link" href="#">成為合作店家 </a>
-            </li>
-
-        </ul>
-        </div>
-
-        <ul class="navbar-nav navLogos">
-            <li class="listN"><a href=""><img src="./img//icon/loupe.png" alt="" style="width: 22px;"></a></li>
-            <li class="listN"><a href=""><img src="./img//icon/user.png" alt="" style="width: 22px;"></a></li>
-            <li class="listN"><a href=""><img src="./img//icon/shopping-cart.png" alt="" style="width: 25px;"></a></li>
-        </ul>
-
-      </nav>
+</div>
 
 <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
 <script src="https://kit.fontawesome.com/f7e0275ee7.js" crossorigin="anonymous"></script>
