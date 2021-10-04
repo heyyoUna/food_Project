@@ -50,8 +50,8 @@
     }
 
     #HP_KV_logo img{
-        width: 60px;
-        height: 60px;
+        width: 70px;
+        height: auto;
 
     }
 
@@ -122,7 +122,7 @@
     }
 
     .HP_KV_img {
-        width: 100%;
+        height: 100%;
         object-fit: cover;
     }
 
@@ -295,18 +295,13 @@
         i = $(this).index();
     
     //火車上移，移動到指定照片
-        $('#HP_KV_img_wrap').css('transform', `translateY(${i * -1000}vh)`);
+        $('#HP_KV_img_wrap').css('transform', `translateY(${i * -100}vh)`);
     
     //選定的li變色
         $(this).css('background-color', '#FFB606').siblings().css('background-color', 'black');
 
     //換標題文字
-    $(`#HP_KV_title_wrap .HP_KV_title:nth-child(${i+1})`).css('opacity', '1').siblings().css('opacity', '0');
-
-    // if (i !== 0) {
-    //     $('.HP_KV_title_main').css('visibility', 'hidden');
-    // } ;
-
+        $(`#HP_KV_title_wrap .HP_KV_title:nth-child(${i+1})`).css('opacity', '1').siblings().css('opacity', '0');
 
 
     });
