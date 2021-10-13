@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="EN">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+</head>
+
+<style>
+    body{
+        height: 1000vh;
+    }
+    *{
+        border: 1px solid #f2f2f2;
+    }
+/*---------- 全頁設定 ----------*/
+    .fGreen{ color: #8FC065;}
+    .fGreenBgc{background-color: #8FC065;}
+    
+
+    .fYellow{ color: #FFB606;}
+    .fYellowBgc{background-color: #FFB606;}
+    
+    .fOrange{ color:#FB6107;}
+    .fOrangeBgc{ background-color:#FB6107;}
+
+/*---------- 首頁＿背景圖 ----------*/
+    .hp_bgcWrap{
+        position: fixed;
+        width: 100%;
+        z-index: -1;
+    }
+
+    .hp_bgc{
+        max-width: 400px;
+        width: 20%;
+        position: fixed;
+    }
+
+    .hp_bgc_1{
+        top: 50px;
+    }
+
+    .hp_bgc_2{
+        top: 300px;
+        right: 0;
+    }
+
+    .hp_bgc_3{
+        top: 700px;
+        left: 0;
+    }
+
+/*---------- 首頁＿商城＿種類圖 ----------*/
+
+    .hpShopCatWrap{
+        display: flex;
+        margin: auto; 
+        margin-top: 100px;
+        margin-bottom: 200px;
+        width: 50%;
+        justify-content: space-between;
+        height: 400px;
+        
+    }
+
+    .hpShopCatBgc{
+        width: 400px; height: 400px;
+        border-radius: 50%;
+        position: relative;
+        bottom: 115%;
+        right: 18%;
+        z-index: -1;
+    }
+
+    .hpShopCatItemWrap_2{
+        margin-left: 350px;
+
+    }
+
+    .hpShopCatWrap .fOrangeBgc{
+        bottom: 130%;
+        right: 5%;
+    }
+
+    
+
+/*---------- 首頁＿商城＿種類＿文字 ----------*/
+    .hpShopCatDes{
+        margin: auto 0 auto 200px; 
+    }
+
+</style>
+
+<body>
+    <div class="hp_bgcWrap">
+        <img  class="hp_bgc hp_bgc_1" src="./img/hp_bgc1-3.png" alt="">
+        <img  class="hp_bgc hp_bgc_2" src="./img/hp_bgc2-3.png" alt="">
+        <img  class="hp_bgc hp_bgc_3" src="./img/hp_bgc3-3.png" alt="">
+    </div>
+
+<div class="hp_shop">
+
+    <div  id="hp_shop_Cat_1" class="hpShopCatWrap">
+        <div class="hpShopCatItemWrap">
+            <div class="hpShopCatImg">
+                <img  src="./img/hp_shop1-3.png" alt="">
+            </div>
+            <div  class="hpShopCatBgc fGreenBgc"></div>
+        </div>     
+
+        <div class="hpShopCatDes">
+            <h4 class="fGreen">快速上桌</h4>
+            <p>健康快速上桌，美味不用等</p>
+            <button class="btn btn-outline-success">VIEW MORE <span>></span></button>
+        </div>
+    </div>
+
+    <div id="hp_shop_Cat_2" class="hpShopCatWrap">
+
+        <div class="hpShopCatDes hpShopCatDes_2">
+            <h4 class="fGreen">快速上桌</h4>
+            <p>健康快速上桌，美味不用等</p>
+            <button class="btn btn-outline-success">VIEW MORE <span>></span></button>
+        </div>
+
+        <div class="hpShopCatItemWrap hpShopCatItemWrap_2">
+            <div class="hpShopCatImg hpShopCatImg_1">
+                <img  src="./img/hp_shop2-3.png" alt="">
+            </div>
+            <div  class="hpShopCatBgc fYellowBgc"></div>
+        </div>     
+
+
+    </div>
+
+    <div  id="hp_shop_Cat_3" class="hpShopCatWrap">
+        <div class="hpShopCatItemWrap">
+            <div class="hpShopCatImg">
+                <img  src="./img/hp_shop3-3.png" alt="">
+            </div>
+            <div  class="hpShopCatBgc fOrangeBgc"></div>
+        </div>     
+
+        <div class="hpShopCatDes">
+            <h4 class="fGreen">快速上桌</h4>
+            <p>健康快速上桌，美味不用等</p>
+            <button class="btn btn-outline-success">VIEW MORE <span>></span></button>
+        </div>
+    </div>
+
+
+        
+
+    </div>
+
+<script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+<script src="https://kit.fontawesome.com/f7e0275ee7.js" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+</body>
+</html>
