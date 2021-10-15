@@ -9,103 +9,112 @@
 </head>
 <style>
     *{
-        border: 1px solid grey;
+        /* border: 1px solid #f2f2f2; */
     }
     body {
         height: 2000px;
         margin-top: 100px;
     }
-/* ---------- 文章1 ---------- */
+/* ---------- 1st文章 ---------- */
     .article1Warp{
-        display: flex;
-        justify-content: center;
-        position: relative;
-        width: 100%;
-        height: 1000px;
-
+        height: 50em;
     }
-
+        /* ---------- 1st文章_文字 ---------- */
     .hp_col_dec1Wrap{
         text-align: right;
+        margin: auto;
     }
+        /* ---------- 1st文章＿圖片 ---------- */
 
-    .hp_col_bgc1{
-        position: absolute;
-        right: 0;
-        bottom: 150px;
-        z-index: -1;
-    }
-
+    
     .hp_col_img1{
         position: absolute;
         right: 0;
-
+        margin-right: 0;
+        z-index: -1;
+        vertical-align: middle;
+    }
+    .hp_col_img1 img{
+        width: 100%;
+        max-height: 50em;
     }
 
+
+
 /* ---------- 文章2 ---------- */
-.article2Wrap{
-    display: flex;
-    justify-content: space-around;
-}
 .hp_col_img2Wrap img{
 width: 100%;
+max-width: 55em;
 }
 
-.hp_col_bgc2{
-    position: absolute;
-    left:0;
-    z-index: -1;
+.hp_col_img2Wrap .cardTxt {
+    background-color: #FFFCFC;
+    border-radius: 20px;
+    position: relative;
+    padding: 10px;
+    bottom: 40%;
+    left:40%;
+    max-width: 250px;
+    /* border: 1px solid grey; */
 }
-.hp_col_img2{
-    position: absolute;
-    left:100px;
+
+.hp_col_img2Wrap .cardTxt p{
+    margin: 0;
 }
+.article2Wrap .moreBtn{
+    margin: auto;
+
+}
+
 
 </style>
 
 <body>
-    <div class="HP_col">
- <!-------- 文章１-------->
-        <div class="article1Warp">
+    <div class="HP_col container-fluid">
+ <!-------- 1st 文章 -------->
+        <div class="article1Warp row">
 
         <!-------- 文章1__文字 -------->
-            <div class="hp_col_dec1Wrap">
+            <div class="hp_col_dec1Wrap col-7">
                 <p>首頁 / 聰明飲食</p>
-                  <h5>防疫在家最怕久坐不動！<br>
+                  <h1>防疫在家最怕久坐不動！<br>
                     注意飲食 三多三少 <br>
                     肥胖不上身
-                </h5>
+                </h1>
 
                 <p>by食力編輯部</p>
-                <button>完整文章</button>
+                <button type="button" class="btn btn-outline-success">完整文章</button>
             </div>
         <!-------- 文章1__圖片 -------->
-            <div class="hp_col_img1Wrap">
-                <div class="hp_col_bgc1"><img src="./img/hp_col_bgc1-2.png" alt=""></div>
-                <div class="hp_col_img1"><img src="./img/hp_col_img1-2.png" alt=""></div>
+            <div class="hp_col_img1Wrap col">
+                <div class="hp_col_img1"><img src="./img//hp_col_img1-2.png" alt=""></div>
             </div>
 
         </div>
-<!-------- 文章2 -------->
-        <div class="article2Wrap">
 
-        <!-------- 文章2__圖片 -------->
-            <div class="hp_col_img2Wrap">
-                <div class="hp_col_bgc2"><img src="./img/hp_col_bgc2-2.png" alt=""></div>
-                <div class="hp_col_img2"><img src="./img/hp_col_img2-2.png" alt=""></div>
-            </div>
-
-        <!-------- 文章2__文字 -------->
-            <div class="hp_col_dec2Wrap">
-                <h6>Most<br> Popular</h6>
+ <!-------- 2nd文章 -------->    
+ <div class="article2Wrap row">
+    <!-------- 文章2__圖片 -------->
+        <div class="hp_col_img2Wrap col">
+            <div><img src="./img/hp_col_img2-2.png" alt=""></div>
+            <div class="cardTxt">
+                <p>聰明飲食</p>
+                <h6>從歐美名人圈紅到台灣的康普茶，到底是什麼？  </h6>
 
             </div>
-            <div>
-                <span>more</span><img src="./img/hp_col_moreIcon.png" alt="">
-            </div>
-
-
         </div>
+
+    <!-------- 文章2__文字 -------->
+        <div class="hp_col_dec2Wrap col-3">
+            <h1>Most<br> Popular</h1>
+        </div>
+        <div class="col-3 moreBtn">
+            <span>more &ensp;</span><img src="./img/hp_col_moreIcon.png" alt="">
+        </div>
+        <div class="col-1"></div>
+
+</div>
+
 
     </div>
 
