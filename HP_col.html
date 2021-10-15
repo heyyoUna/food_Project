@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="EN">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HP_col</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+</head>
+<style>
+    *{
+        border: 1px solid grey;
+    }
+    body {
+        height: 2000px;
+        margin-top: 100px;
+    }
+/* ---------- 文章1 ---------- */
+    .article1Warp{
+        display: flex;
+        justify-content: center;
+        position: relative;
+        width: 100%;
+        height: 1000px;
+
+    }
+
+    .hp_col_dec1Wrap{
+        text-align: right;
+    }
+
+    .hp_col_bgc1{
+        position: absolute;
+        right: 0;
+        bottom: 150px;
+        z-index: -1;
+    }
+
+    .hp_col_img1{
+        position: absolute;
+        right: 0;
+
+    }
+
+/* ---------- 文章2 ---------- */
+.article2Wrap{
+    display: flex;
+    justify-content: space-around;
+}
+.hp_col_img2Wrap img{
+width: 100%;
+}
+
+.hp_col_bgc2{
+    position: absolute;
+    left:0;
+    z-index: -1;
+}
+.hp_col_img2{
+    position: absolute;
+    left:100px;
+}
+
+</style>
+
+<body>
+    <div class="HP_col">
+ <!-------- 文章１-------->
+        <div class="article1Warp">
+
+        <!-------- 文章1__文字 -------->
+            <div class="hp_col_dec1Wrap">
+                <p>首頁 / 聰明飲食</p>
+                  <h5>防疫在家最怕久坐不動！<br>
+                    注意飲食 三多三少 <br>
+                    肥胖不上身
+                </h5>
+
+                <p>by食力編輯部</p>
+                <button>完整文章</button>
+            </div>
+        <!-------- 文章1__圖片 -------->
+            <div class="hp_col_img1Wrap">
+                <div class="hp_col_bgc1"><img src="./img/hp_col_bgc1-2.png" alt=""></div>
+                <div class="hp_col_img1"><img src="./img/hp_col_img1-2.png" alt=""></div>
+            </div>
+
+        </div>
+<!-------- 文章2 -------->
+        <div class="article2Wrap">
+
+        <!-------- 文章2__圖片 -------->
+            <div class="hp_col_img2Wrap">
+                <div class="hp_col_bgc2"><img src="./img/hp_col_bgc2-2.png" alt=""></div>
+                <div class="hp_col_img2"><img src="./img/hp_col_img2-2.png" alt=""></div>
+            </div>
+
+        <!-------- 文章2__文字 -------->
+            <div class="hp_col_dec2Wrap">
+                <h6>Most<br> Popular</h6>
+
+            </div>
+            <div>
+                <span>more</span><img src="./img/hp_col_moreIcon.png" alt="">
+            </div>
+
+
+        </div>
+
+    </div>
+
+<script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+<script src="https://kit.fontawesome.com/f7e0275ee7.js" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+</body>
+</html>
